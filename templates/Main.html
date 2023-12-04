@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict</title>
+</head>
+<body>
+    <div class="container contact-form">
+        <div class="contact-image">
+            <img src="https://i.ibb.co/27v17yR/image.png" alt="image"/>
+        </div>
+        <form method="POST", action="{{url_for('predict')}}">
+            <h3> Kepuasan Koperasi di Fakultas Sains dan Teknologi Bagi Mahasiswa Fakultas Sains dan Teknologi</h3>
+            <div class="row">
+                 <div class="col-md-6">
+                     <div class="form-group">
+                         <p>Menurut anda koperasi FST yang baru terlihat lebih higenis dibanding yang lama?</p>
+                         <input type="number" name="higienis" class="form-control" placeholder="Angka 1-5 (ex : 1)"  />
+                     </div>
+                     <div class="form-group">
+                         <p>Menurut anda koperasi FST yang baru lebih baik pelayanannya dibanding yang lama?</p>
+                         <input type="number" name="pelayanan" class="form-control" placeholder="Angka 1-5 (ex : 1)"  />
+                     </div>
+                     <div class="form-group">
+                         <p>Menurut anda ketersediaan dagangan koperasi FST yang baru lebih bervariasi dibandingkan yang sebelumnya?</p>
+                         <input type="number" name="variasi" class="form-control" placeholder="Angka 1-5 (ex : 1)"  />
+                     </div>
+                     <div class="form-group">
+                         <input type="submit" name="btnSubmit" class="btnContact" value="predict" />
+                     </div>
+                 </div>
+                 <div class="col-md-6">
+                     <div class="form-group">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                              <h5 class="card-title">Tingkat Kepuasan</h5>
+                              <p class="card-text">1 : Sangat Tidak Puas</p>
+                              <p class="card-text">2 : Tidak Puas</p>  
+                              <p class="card-text">3 : Baik</p>  
+                              <p class="card-text">4 : Puas</p>    
+                              <p class="card-text">5 : Sangat Puas</p>  
+                            </div>
+                     </div>
+                 </div>
+             </div>
+            </div>
+         </form>
+         <div class="col-md-6">
+            <p>Hasil Prediksi: Cluster{{data}}</p>
+         </div>
+    </div>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+</div>
+</body>
+</html>
