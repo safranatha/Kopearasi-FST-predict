@@ -6,7 +6,7 @@ import pandas as pd
 app = Flask(__name__)
 model = pickle.load(open('NBayes.pkl', 'rb'))
 
-@app.route('/home')
+@app.route('/')
 def main():
     return render_template('Main.html')
 
