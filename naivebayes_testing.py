@@ -50,7 +50,7 @@ print("SPLITTING DATA 20-80".center(75,"="))
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=20)
 
 # Bin the data
-kbins = KBinsDiscretizer(n_bins=3, encode='ordinal', strategy='uniform')
+kbins = KBinsDiscretizer(n_bins=5, encode='ordinal', strategy='uniform')
 X_train_binned = kbins.fit_transform(X_train)
 X_test_binned = kbins.transform(X_test)
 
